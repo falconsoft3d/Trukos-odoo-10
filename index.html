@@ -68,7 +68,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
       <li class="separator"></li>
       <li><strong>Programación en Odoo</strong></li>
-      <li><a href="#odo-pro-1" class="cc-active">Crear un módulo automático</a></li>
+      <li><a href="#odop1" class="cc-active">Crear un módulo automático</a></li>
 
     </ul>
     <div class="docs-content">
@@ -94,11 +94,13 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
           type(e)
       </pre>
 
-      <h3 id="odo-pro-1">Crear un módulo automático</h3>      
+      <h3 id="odop1">Crear un módulo automático</h3>      
       <p>Odoo cuenta con una herramienta que te permite crear módulos completos para empezar a programar.</p>
       <pre class="prettyprint">   
-          # una cadena
-          c = "Hola Marlon"
+          # 1- Nos colocamos en la carpeta Odoo 10.0\server
+          # cd C:\Program Files (x86)\Odoo 10.0\server
+          # 2- Ejecutamos el siguiente comando
+          odoo-bin scaffold nombremodulo odoo/addons
       </pre>
     
     </div>
