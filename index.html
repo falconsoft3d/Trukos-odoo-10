@@ -64,6 +64,7 @@
       <li><strong>Configuración Odoo</strong></li>
       <li><a href="#conf1" class="cc-active">Respaldo Base de Datos</a></li>
       <li><a href="#conf2" class="cc-active">Password por defecto</a></li>
+      <li><a href="#conf3" class="cc-active">Instalando Odoo Ubuntu</a></li>
 
 
 
@@ -117,12 +118,20 @@
           http://localhost:8069/web/database/manager
       </pre>
 
-      <h3 id="conf1">Password por defecto</h3>      
+      <h3 id="conf2">Password por defecto</h3>      
       <p>Contraseñas por defecto.</p>
       <pre class="prettyprint">
           Port: 5432
           Username:openpg
           Password:openpgpwd
+      </pre>
+
+      <h3 id="conf2">Instalando Odoo Ubuntu</h3>      
+      <p><a href="https://nightly.odoo.com/">nightly.odoo.com</a></p>
+      <pre class="prettyprint">
+          wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
+          echo "deb http://nightly.odoo.com/9.0/nightly/deb/ ./" >> /etc/apt/sources.list
+          apt-get update && apt-get install odoo
       </pre>
 
 
