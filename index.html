@@ -58,6 +58,7 @@
       <li class="separator"></li>
       <li><strong>Programación en Odoo</strong></li>
       <li><a href="#odop1" class="cc-active">Crear un módulo automático</a></li>
+      <li><a href="#odop2" class="cc-active">Plantilla de un módulo</a></li>
 
 
       <li class="separator"></li>
@@ -110,6 +111,39 @@
           # 2- Ejecutamos el siguiente comando
           odoo-bin scaffold nombremodulo odoo/addons
       </pre>
+
+      <h3 id="odop2">Plantilla de un módulo</h3>      
+      <p>__init__.py</p>
+      <pre class="prettyprint">   
+         # -*- coding: utf-8 -*-
+         # Part of Odoo. See LICENSE file for full copyright and licensing details.
+         from . import models
+      </pre>
+      <p>__manifest__.py</p>
+      <pre class="prettyprint"> 
+
+# -*- coding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Copyright (c) 2016 FALCON SOLUTIONS - Marlon Falcón, Ezequiel http://www.falconsolutions.cl
+{
+    'name': "Modulo RUC - 123ERP",
+    'version': '1.0',
+    'description': """
+Paraguay RUC
+==============================================
+Configuracion del campo RUC
+    """,
+    'author': 'FALCON SOLUTIONS - Marlon Falcón',
+    'website': "www.falconsolutions.cl",
+    'category': 'Localization',
+    'depends': ['sale'],
+    'data': [
+         'views/partner.xml',
+    ],
+}
+     
+      </pre>
+
 
       <!-- ####################################  --> 
 
