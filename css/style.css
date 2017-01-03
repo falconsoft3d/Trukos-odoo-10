@@ -459,7 +459,7 @@ input:focus {
     }
 
     .container {
-        width: 100%;
+        max-width: 200px;
         padding: 0 20px;
     }
 
