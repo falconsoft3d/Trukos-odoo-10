@@ -364,32 +364,6 @@ input:focus {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .docs-nav {
     background-color: #f5f5f5;
     list-style: none;
@@ -459,7 +433,7 @@ input:focus {
     }
 
     .container {
-        max-width: 200px;
+        max-width: 2000px;
         padding: 0 20px;
     }
 
