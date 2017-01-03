@@ -65,6 +65,7 @@
       <li><a href="#conf1" class="cc-active">Respaldo Base de Datos</a></li>
       <li><a href="#conf2" class="cc-active">Password por defecto</a></li>
       <li><a href="#conf3" class="cc-active">Instalando Odoo en Ubuntu</a></li>
+      <li><a href="#conf4" class="cc-active">Procesos Odoo en Windows</a></li>
 
 
 
@@ -127,12 +128,28 @@
       </pre>
 
       <h3 id="conf3">Instalando Odoo en Ubuntu</h3>      
-      <p><a href="https://nightly.odoo.com/">nightly.odoo.com</a></p>
+      <p>Lo puede hacer desde el siguiente sitio: <a href="https://nightly.odoo.com/">nightly.odoo.com</a></p>
       <pre class="prettyprint">
           wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
-          echo "deb http://nightly.odoo.com/9.0/nightly/deb/ ./" >> /etc/apt/sources.list
+          echo "deb http://nightly.odoo.com/10.0/nightly/deb/ ./" >> /etc/apt/sources.list
           apt-get update && apt-get install odoo
       </pre>
+
+      <h3 id="conf4">Procesos Odoo en Windows</h3>      
+      <p>Si queremos saber si tenemos un error tenemos que ver el archivo odoo.log que cambia en tiempo real</p>
+      <pre class="prettyprint">
+          # Instalamos Windows Server 2003 Resource Kit Tools
+          https://www.microsoft.com/en-us/download/confirmation.aspx?id=17657
+
+
+          # Nos colocamos en la carpeta de la app
+          C:\Program Files (x86)\Windows Resource Kits\Tools
+
+
+          # Ejecutamos en el CMD el siguiente comando
+          tail.exe -f "C:\Program Files (x86)\Odoo 9.0-20160521\server\odoo.log"
+      </pre>
+
 
 
       <!-- ####################################  -->
