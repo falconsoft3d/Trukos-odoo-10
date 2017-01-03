@@ -145,6 +145,29 @@ Configuracion del campo RUC
       </pre>
 
 
+      <p>views/partner.xml</p>
+      <pre class="prettyprint">   
+<?xml version="1.0" encoding="UTF-8"?>
+ <odoo>
+    <data>
+        <!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="partner_instructor_form_view">
+            <field name="name">partner.instructor</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml"> 
+               <field name="category_id" position="after" >          
+                    <field name="ruc" string="RUC:" placeholder="00000000" /> 
+               </field>                       
+            </field>
+        </record>
+    </data>
+</odoo>
+      </pre>
+
+
+
+
       <!-- ####################################  --> 
 
       <h3 id="conf1">Respaldo Base de Datos</h3>      
