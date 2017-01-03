@@ -67,6 +67,7 @@
       <li><a href="#conf2" class="cc-active">Password por defecto</a></li>
       <li><a href="#conf3" class="cc-active">Instalando Odoo en Ubuntu</a></li>
       <li><a href="#conf4" class="cc-active">Procesos Odoo en Windows</a></li>
+      <li><a href="#conf5" class="cc-active">Clonando un módulo de GitHub</a></li>
 
 
 
@@ -184,9 +185,22 @@ Configuracion del campo RUC
           # Ejecutamos en el CMD el siguiente comando
           tail.exe -f "C:\Program Files (x86)\Odoo 9.0-20160521\server\odoo.log"
       </pre>
+     
+     <h3 id="conf5"> Clonando un módulo de GitHub</h3>      
+      <p>Si queremos clonar un módulo de odoo desde Github usamos los siguientes comandos</p>
+      <pre class="prettyprint">
+          ## Instalamos git ###
+          sudo apt install git
+          
+          ## nos colocamos sobre la carpeta de modulos ###
+          cd /usr/lib/python2.7/dist-packages/openerp/addons
 
-
-
+          ## Instalamos el primer modulo ##
+          git clone -b 9.0 https://github.com/dansanti/l10n_cl_vat
+          sudo service odoo restart
+      </pre>
+     
+    
       <!-- ####################################  -->
 
 
