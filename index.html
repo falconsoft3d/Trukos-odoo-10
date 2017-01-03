@@ -63,6 +63,7 @@
       <li class="separator"></li>
       <li><strong>Configuración Odoo</strong></li>
       <li><a href="#conf1" class="cc-active">Respaldo Base de Datos</a></li>
+      <li><a href="#conf2" class="cc-active">Password por defecto</a></li>
 
 
 
@@ -83,6 +84,8 @@
         <li>Módulo de Compras</li>
       </ul>
 
+      <!-- ####################################  -->
+
       <h3 id="var1">Variables en Python</h3>      
       <p> En Phyton las variable puede declararse de cualquier tipo y pueden cambiar su tipo en el programa.</p>
       <pre class="prettyprint">   
@@ -95,6 +98,8 @@
           type(e)
       </pre>
 
+      <!-- ####################################  -->
+
       <h3 id="odop1">Crear un módulo automático</h3>      
       <p>Odoo cuenta con una herramienta que te permite crear módulos completos para empezar a programar.</p>
       <pre class="prettyprint">   
@@ -104,12 +109,24 @@
           odoo-bin scaffold nombremodulo odoo/addons
       </pre>
 
+      <!-- ####################################  --> 
 
       <h3 id="conf1">Respaldo Base de Datos</h3>      
       <p>Para crear un respaldo de la base de datos utilizaremos el siguiente comando.</p>
       <pre class="prettyprint">
           http://localhost:8069/web/database/manager
       </pre>
+
+      <h3 id="conf1">Password por defecto</h3>      
+      <p>Contraseñas por defecto.</p>
+      <pre class="prettyprint">
+          Port: 5432
+          Username:openpg
+          Password:openpgpwd
+      </pre>
+
+
+      <!-- ####################################  -->
 
 
       <h3 id="link1">Links de Interés</h3>
