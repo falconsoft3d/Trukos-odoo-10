@@ -149,7 +149,7 @@ a {
     -o-transition: all ease 150ms;
     transition: all ease 150ms;
     text-decoration: none;
-    color: #26abe2;
+    color: #a24689;
 }
 
 a:hover {
@@ -165,7 +165,7 @@ a:active {
 header {
     padding: 2em 0 2em 0; 
     
-    background: #26abe2; 
+    background: #a24689; 
     color: #fff;
 }
 
@@ -432,13 +432,13 @@ input:focus {
     }
 
     .docs-nav a:hover {
-        background: #26ABE2;
+        background: #a24689;
 		color:#fff;
     }
 
     .docs-nav a:active, 
     .docs-nav .active {
-        background: #26ABE2;
+        background: #a24689;
 		color:#fff;
         border-right: 2px solid #ccc;
     }
