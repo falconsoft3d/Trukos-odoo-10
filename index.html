@@ -64,7 +64,7 @@
       <li><strong>Programación en Odoo</strong></li>
       <li><a href="#odop1" class="cc-active">Crear un módulo automático</a></li>
       <li><a href="#odop2" class="cc-active">Plantilla de un módulo</a></li>
-      <li><a href="#odop3" class="cc-active">Tipos de Datos en Odoo</a></li>
+      <li><a href="#odop3" class="cc-active">Tipos de datos en Odoo</a></li>
 
       <li class="separator"></li>
       <li><strong>Configuración Odoo</strong></li>
@@ -132,20 +132,20 @@
      
      
  <h3 id="odop3">ORM</h3>      
-  <p>Tipos de Datos en Odoo.</p>
+  <p>Tipos de datos en Odoo.</p>
    <div class="highlight-xml">
     <div class="highlight">  
      <pre>   
-         ##string --## the label of the field seen by users (string); if not set, the ORM takes the field name in the class (capitalized).
-         help -- the tooltip of the field seen by users (string)
-         readonly -- whether the field is readonly (boolean, by default False)
-         required -- whether the value of the field is required (boolean, by default False)
-         index -- whether the field is indexed in database (boolean, by default False)
-         default -- the default value for the field; this is either a static value, or a function taking a recordset and returning a value; use default=None to discard default values for the field
-         states -- a dictionary mapping state values to lists of UI attribute-value pairs; possible attributes are: 'readonly', 'required', 'invisible'. Note: Any state-based condition requires the state field value to be available on the client-side UI. This is typically done by including it in the relevant views, possibly made invisible if not relevant for the end-user.
-         groups -- comma-separated list of group xml ids (string); this restricts the field access to the users of the given groups only
-         copy (bool) -- whether the field value should be copied when the record is duplicated (default: True for normal fields, False for one2many and computed fields, including property fields and related fields)
-         oldname (string) -- the previous name of this field, so that ORM can rename it automatically at migration
+         string -- Cadenas
+         help - tooltip de ayuda
+         readonly - Si el campo es solo lectura.
+         required -- Si el campo es requerido
+         index -- Cuando el campo puede ser indexado en la base de dato
+         default --  Valor por defecto de un campo
+         states -- Un diccionario
+         groups -- Listas
+         copy (bool) -- Cuando un campo es copiado
+         oldname (string) -- El nombre anterior
       </pre>
      </div>
    </div>
