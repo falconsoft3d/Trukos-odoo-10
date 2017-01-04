@@ -269,6 +269,29 @@ Configuracion del campo RUC
       </pre>
                                          </div>
       </div>
+     
+     
+     
+             <div class="highlight-xml">
+      <div class="highlight"> 
+       
+     <search string="Ideas">
+    <field name="name"/>
+    <field name="description" string="Name and description"
+           filter_domain="['|', ('name', 'ilike', self), ('description', 'ilike', self)]"/>
+    <field name="inventor_id"/>
+    <field name="country_id" widget="selection"/>
+
+    <filter name="my_ideas" string="My Ideas"
+            domain="[('inventor_id', '=', uid)]"/>
+    <group string="Group By">
+        <filter name="group_by_inventor" string="Inventor"
+                context="{'group_by': 'inventor_id'}"/>
+    </group>
+</search>
+                                        </div>
+      </div>   
+     
     
       <!-- ####################################  -->
 
