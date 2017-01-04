@@ -101,7 +101,8 @@
       <p> En Phyton las variable puede declararse de cualquier tipo y pueden cambiar su tipo en el programa.</p>
      <div class="highlight-xml">
       <div class="highlight"> 
-       <pre>   
+       <pre>
+          <code class="html">
           # una cadena
           c = "Hola Marlon"
           # y esto es un entero
@@ -109,6 +110,7 @@
           # podemos comprobarlo con la función type
           type(c)
           type(e)
+          </code>
         </pre>
        </div>
       </div> 
@@ -335,7 +337,7 @@ Configuracion del campo RUC
 <script src="js/layout.js"></script>
 <script>
  $(document).ready(function() {
-  $('highlight pre').each(function(i, block) {
+  $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
   });
 });
