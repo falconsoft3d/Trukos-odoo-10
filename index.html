@@ -69,6 +69,7 @@
       <li><a href="#odop1" class="cc-active">3.1 Crear un módulo</a></li>      
       <li><a href="#odop3" class="cc-active">3.2 Tipos de datos en Odoo</a></li>
 
+
       <li class="separator"></li>
       <li><strong>4 Configuración Odoo</strong></li>
       <li><a href="#conf1" class="cc-active">4.1 Respaldo Base de Datos</a></li>
@@ -117,7 +118,7 @@
           </code>
         </pre>
 
-      <h3 id="var1">2.2 Funciones</h3>      
+      <h3 id="var2">2.2 Funciones</h3>      
       <p>Phyton permite crear funciones muy fácilmente usando la siguiente sintaxis</p>
        <pre>
           <code class="python">
@@ -146,7 +147,7 @@
      
      
      
- <h3 id="odop3">ORM - Tipos de datos en Odoo</h3>      
+ <h3 id="odop3">3.2 ORM - Tipos de datos en Odoo</h3>      
   <p>Tipos de datos.</p>
       <pre>
         <code class="python">   
@@ -165,20 +166,7 @@
 
      
      
-     
-     
-<h3 id="odop1">Campos relacionales</h3>      
-      <p>Odoo cuenta con una herramienta que te permite crear módulos completos para empezar a programar.</p>
-     <pre>
-        <code class="python">  
-          # 1- Nos colocamos en la carpeta Odoo 10.0\server
-          # cd C:\Program Files (x86)\Odoo 10.0\server
-          # 2- Ejecutamos el siguiente comando
-          # $ odoo-bin scaffold [module name] [where to put it]
-          odoo-bin scaffold nombremodulo odoo/addons
-     </code>
- </pre>
-     
+  
      
 
  <h3 id="est1">Plantilla de un módulo</h3>      
@@ -191,9 +179,8 @@
   </code>
  </pre>
    
-        
- <h3 id="est1">Fichero __init__.py</h3>      
-      <p>__init__.py</p>
+            
+  <p>__manifest__.py</p>
     <pre>
     <code class="python"> 
 # -*- coding: utf-8 -*-
