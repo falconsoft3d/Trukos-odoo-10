@@ -12,6 +12,10 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/prettify.css">
 <meta name="google-site-verification" content="6SJfppWH73AwMKg9GAzWM4Htzr0i60eHL0H3PAvv7cw" />
+ 
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+ 
 </head>
  
 <body>
@@ -93,7 +97,9 @@
 
       <h3 id="var1">Variables en Python</h3>      
       <p> En Phyton las variable puede declararse de cualquier tipo y pueden cambiar su tipo en el programa.</p>
-      <pre class="prettyprint">   
+     <div class="highlight-xml">
+      <div class="highlight"> 
+       <pre>   
           # una cadena
           c = "Hola Marlon"
           # y esto es un entero
@@ -101,8 +107,9 @@
           # podemos comprobarlo con la función type
           type(c)
           type(e)
-      </pre>
-
+        </pre>
+       </div>
+      </div> 
       <!-- ####################################  -->
 
       <h3 id="odop1">Crear un módulo automático</h3>      
@@ -111,8 +118,19 @@
           # 1- Nos colocamos en la carpeta Odoo 10.0\server
           # cd C:\Program Files (x86)\Odoo 10.0\server
           # 2- Ejecutamos el siguiente comando
+          # $ odoo-bin scaffold [module name] [where to put it]
           odoo-bin scaffold nombremodulo odoo/addons
       </pre>
+     
+       <h3 id="odop1">Campos relacionales</h3>      
+      <p>Odoo cuenta con una herramienta que te permite crear módulos completos para empezar a programar.</p>
+      <pre class="prettyprint">   
+          # 1- Nos colocamos en la carpeta Odoo 10.0\server
+          # cd C:\Program Files (x86)\Odoo 10.0\server
+          # 2- Ejecutamos el siguiente comando
+          # $ odoo-bin scaffold [module name] [where to put it]
+          odoo-bin scaffold nombremodulo odoo/addons
+      </pre>    
 
       <h3 id="odop2">Plantilla de un módulo</h3>      
       <p>__init__.py</p>
