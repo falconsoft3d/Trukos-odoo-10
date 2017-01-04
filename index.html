@@ -335,5 +335,12 @@ Configuracion del campo RUC
 <script type="text/javascript" src="js/prettify/prettify.js"></script> 
 <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
 <script src="js/layout.js"></script>
-</body>
+<script>
+ $(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script> 
+ </body>
 </html>
