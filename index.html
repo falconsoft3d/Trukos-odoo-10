@@ -203,29 +203,6 @@ Configuracion del campo RUC
  </pre>
      
      
- <h3 id="odop3">Fichero __init__.py</h3>      
-   <p>__init__.py</p>
-    <pre>
-      <code class="html"> 
- <odoo>
-    <data>
-        <!-- Add instructor field to existing view -->
-        <record model="ir.ui.view" id="partner_instructor_form_view">
-            <field name="name">partner.instructor</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_form"/>
-            <field name="arch" type="xml"> 
-               <field name="category_id" position="after" >          
-                    <field name="rut" string="RUT:" placeholder="00000000-0" /> 
-               </field>                       
-            </field>
-        </record>
-    </data>
-</odoo>
-      </code>
- </pre>
-
-
       <!-- ####################################  --> 
 
       <h3 id="conf1">Respaldo Base de Datos</h3>      
