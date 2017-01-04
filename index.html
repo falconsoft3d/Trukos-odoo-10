@@ -117,26 +117,23 @@
 
       <h3 id="odop1">Crear un módulo</h3>      
       <p>Odoo cuenta con una herramienta que te permite crear módulos completos para empezar a programar.</p>
-          <div class="highlight-xml">
-      <div class="highlight">  
-     <pre>   
+          <pre>
+          <code class="python">  
           # 1- Nos colocamos en la carpeta Odoo 10.0\server
           # cd C:\Program Files (x86)\Odoo 10.0\server
           # 2- Ejecutamos el siguiente comando
           # $ odoo-bin scaffold [module name] [where to put it]
           odoo-bin scaffold nombremodulo odoo/addons
+          </code>
       </pre>
-              </div>
-      </div> 
      
      
      
      
  <h3 id="odop3">ORM - Tipos de datos en Odoo</h3>      
   <p>Tipos de datos.</p>
-   <div class="highlight-xml">
-    <div class="highlight">  
-     <pre>   
+      <pre>
+        <code class="python">   
          string -- Cadenas
          help - tooltip de ayuda
          readonly - Si el campo es solo lectura.
@@ -147,55 +144,43 @@
          groups -- Listas
          copy (bool) -- Cuando un campo es copiado
          oldname (string) -- El nombre anterior
-      </pre>
-     </div>
-   </div>
+     </code>
+    </pre>
 
      
-  <h3 id="odop3">ORM - Tipos de herencia/h3>      
-  <p>En Odoo tenemos tres tipos de herencia.</p>
-   <div class="highlight-xml">
-    <div class="highlight">  
-       <img href="img/inheritance_methods1.png" />
-     </div>
-   </div>   
      
      
      
        <h3 id="odop1">Campos relacionales</h3>      
       <p>Odoo cuenta con una herramienta que te permite crear módulos completos para empezar a programar.</p>
-               <div class="highlight-xml">
-      <div class="highlight">   
-     <pre>   
+     <pre>
+        <code class="python">  
           # 1- Nos colocamos en la carpeta Odoo 10.0\server
           # cd C:\Program Files (x86)\Odoo 10.0\server
           # 2- Ejecutamos el siguiente comando
           # $ odoo-bin scaffold [module name] [where to put it]
           odoo-bin scaffold nombremodulo odoo/addons
-      </pre>
-                     </div>
-      </div> 
+     </code>
+    </pre>
      
      
 
-      <h3 id="odop2">Plantilla de un módulo</h3>      
-      <p>__init__.py</p>
-                <div class="highlight-xml">
-      <div class="highlight">   
-     <pre>   
+  <h3 id="odop2">Plantilla de un módulo</h3>      
+   <p>__init__.py</p>
+    <pre>
+        <code class="python">   
          # -*- coding: utf-8 -*-
          # Part of Odoo. See LICENSE file for full copyright and licensing details.
          from . import models
-      </pre>
-                            </div>
-      </div>
+  </code>
+ </pre>
    
         
  <h3 id="odop3">Fichero __init__.py</h3>      
       <p>__init__.py</p>
-                <div class="highlight-xml">
-      <div class="highlight">   
-     <pre> 
+   <p>__init__.py</p>
+    <pre>
+    <code class="python"> 
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 # Copyright (c) 2016 FALCON SOLUTIONS - Marlon Falcón, Ezequiel http://www.falconsolutions.cl
@@ -215,60 +200,51 @@ Configuracion del campo RUC
          'views/partner.xml',
     ],
 }
-     
-      </pre>
-                          </div>
-      </div>
+      </code>
+ </pre>
 
 
       <!-- ####################################  --> 
 
       <h3 id="conf1">Respaldo Base de Datos</h3>      
       <p>Para crear un respaldo de la base de datos utilizaremos el siguiente comando.</p>
-                          <div class="highlight-xml">
-      <div class="highlight">    
-       
-     <pre>
+ <pre>
+    <code class="python"> 
           http://localhost:8069/web/database/manager
-      </pre>
-                               </div>
-      </div>
+    </code>
+ </pre>
+
      
      
      
 
       <h3 id="conf2">Password por defecto</h3>      
       <p>Contraseñas por defecto.</p>
-                               <div class="highlight-xml">
-      <div class="highlight">   
-     <pre>
+    <pre>
+    <code class="python"> 
           Port: 5432
           Username:openpg
           Password:openpgpwd
-      </pre>
-                                  </div>
-      </div>
+   </code>
+ </pre>
 
       <h3 id="conf3">Instalando Odoo en Ubuntu</h3>      
       <p>Lo puede hacer desde el siguiente sitio: <a href="https://nightly.odoo.com/">nightly.odoo.com</a></p>
-      <div class="highlight-xml">
-      <div class="highlight">   
-     <pre>
+  <pre>
+    <code class="python"> 
           wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
           echo "deb http://nightly.odoo.com/10.0/nightly/deb/ ./" >> /etc/apt/sources.list
           apt-get update && apt-get install odoo
-      </pre>
-                               </div>
-      </div>
+     </code>
+ </pre>
      
      
      
 
       <h3 id="conf4">Procesos Odoo en Windows</h3>      
       <p>Si queremos saber si tenemos un error tenemos que ver el archivo odoo.log que cambia en tiempo real</p>
-       <div class="highlight-xml">
-      <div class="highlight">   
-     <pre>
+ <pre>
+    <code class="python"> 
           # Instalamos Windows Server 2003 Resource Kit Tools
           https://www.microsoft.com/en-us/download/confirmation.aspx?id=17657
 
@@ -279,19 +255,16 @@ Configuracion del campo RUC
 
           # Ejecutamos en el CMD el siguiente comando
           tail.exe -f "C:\Program Files (x86)\Odoo 9.0-20160521\server\odoo.log"
-      </pre>
-       
-                                     </div>
-      </div>
+  </code>
+ </pre>
      
      
      
      
      <h3 id="conf5"> Clonando un módulo de GitHub</h3>      
       <p>Si queremos clonar un módulo de odoo desde Github usamos los siguientes comandos</p>
-           <div class="highlight-xml">
-      <div class="highlight">   
-     <pre>
+<pre>
+    <code class="python"> 
           ## Instalamos git ###
           sudo apt install git
           
@@ -301,9 +274,8 @@ Configuracion del campo RUC
           ## Instalamos el primer modulo ##
           git clone -b 9.0 https://github.com/dansanti/l10n_cl_vat
           sudo service odoo restart
-      </pre>
-                                         </div>
-      </div>
+    </code>
+ </pre>
      
       
     
