@@ -165,7 +165,7 @@
      
      
 
-  <h3 id="odop2">Plantilla de un módulo</h3>      
+ <h3 id="odop2">Plantilla de un módulo</h3>      
    <p>__init__.py</p>
     <pre>
         <code class="python">   
@@ -178,7 +178,6 @@
         
  <h3 id="odop3">Fichero __init__.py</h3>      
       <p>__init__.py</p>
-   <p>__init__.py</p>
     <pre>
     <code class="python"> 
 # -*- coding: utf-8 -*-
@@ -200,6 +199,30 @@ Configuracion del campo RUC
          'views/partner.xml',
     ],
 }
+      </code>
+ </pre>
+     
+     
+ <h3 id="odop3">Fichero __init__.py</h3>      
+   <p>__init__.py</p>
+    <pre>
+      <code class="html"> 
+<?xml version="1.0" encoding="UTF-8"?>
+ <odoo>
+    <data>
+        <!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="partner_instructor_form_view">
+            <field name="name">partner.instructor</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml"> 
+               <field name="category_id" position="after" >          
+                    <field name="rut" string="RUT:" placeholder="00000000-0" /> 
+               </field>                       
+            </field>
+        </record>
+    </data>
+</odoo>
       </code>
  </pre>
 
