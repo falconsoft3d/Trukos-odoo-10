@@ -95,6 +95,7 @@
       <li class="separator"></li>
       <li><strong>5 Estructura de un Módulo</strong></li>
       <li><a href="#est1" class="cc-active">5.1 Plantilla de un módulo</a></li>
+      <li><a href="#est2" class="cc-active">5.2 Modelos - Variables </a></li>
 
      
       <li class="separator"></li>
@@ -421,6 +422,17 @@ from odoo import fields, models
       </code>
  </pre>  
 
+
+<h3 id="est2">5.2 Modelos - Variables</h3>      
+   <p>__init__.py</p>
+    <pre>
+        <code class="python">   
+        nombre = fields.char('Nombre', size=80, required=True, help='Aqui pones el nombre')
+        fecha_nacimiento = fields.date('Fecha de nacimiento', help='Fecha de Nacimiento')
+        cedula = fields.integer('Cedula', size=10, required=True, help='Aqui pones la cedula')
+        direccion =  fields.text('Direccion', help='Direccion')
+       </code>
+ </pre>
 
 
 
