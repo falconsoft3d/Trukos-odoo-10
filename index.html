@@ -273,8 +273,21 @@
       <p>En Odoo es recomendable instalar los módulo que no son oficiales en otra carpeta para ello seguiremos los siguientes pasos</p>
 <pre>
     <code class="python"> 
-          ## Instalamos git ###
+          
+          ## 1- Nos conectamos con permiso de administrador ##
+          sudo su
+
+          ## 2- Damos permiso de escritura a la carpeta de odoo ###
+          chmod 777 -R  /var/lib/odoo/
+
+          ## 3- Entramos en la carpeta que colocaremos los módulos ###
+          cd /var/lib/odoo/.local/share/Odoo/addons/10.0
+
+          ## 4- Instalamos git ###
           sudo apt install git
+
+          ## 5- Clonamos el repositorio ###
+          git clone https://github.com/odoochile/Odoo-Chile
           
     </code>
  </pre>
