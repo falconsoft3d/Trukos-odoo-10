@@ -64,6 +64,7 @@
     <ul class="docs-nav">
       <li><strong>1 Introducción</strong></li>
       <li><a href="#odoo1" class="cc-active">1.1 ¿Qué es Odoo?</a></li>
+      <li><a href="#odoo2" class="cc-active">1.2 GitHub para Odoo</a></li>
 
       <li class="separator"></li>
       <li><strong>2 Programación en Python</strong></li>
@@ -111,6 +112,29 @@
         <li>Módulo de Contabilidad</li>
         <li>Módulo de Compras</li>
       </ul>
+
+
+
+      <h3 id="odoo1">1.2 GitHub para Odoo</h3>      
+      <p> Lo Básico que tenemos que conocer de GitHub y Linux para Odoo <p> 
+       <pre>
+          <code class="python">
+          ## Instalamos git ###
+          sudo apt install git
+
+          # Instalamos un módulo
+          git clone https://github.com/odoochile/Odoo-Chile
+
+          ## Reiniciamos Odoo ##
+          service odoo restart
+
+          ## Actualizar tu directorio local ##
+          git pull
+          
+          # Borramos un directorio con ficheros
+          rm -Rf Odoo-Chile
+          </code>
+        </pre>
 
       <!-- ####################################  -->
 
