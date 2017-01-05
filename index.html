@@ -166,10 +166,90 @@
 
      
      
-  
+ 
+     
+     
+      <!-- ####################################  --> 
+
+      <h3 id="conf1">4.1 Respaldo Base de Datos</h3>      
+      <p>Para crear un respaldo de la base de datos utilizaremos el siguiente comando.</p>
+ <pre>
+    <code class="python"> 
+          http://localhost:8069/web/database/manager
+    </code>
+ </pre>
+
+     
+     
      
 
- <h3 id="est1">Plantilla de un módulo</h3>      
+      <h3 id="conf2">4.2 Password por defecto</h3>      
+      <p>Contraseñas por defecto.</p>
+    <pre>
+    <code class="python"> 
+          Port: 5432
+          Username:openpg
+          Password:openpgpwd
+   </code>
+ </pre>
+
+      <h3 id="conf3">4.3 Instalando Odoo en Ubuntu</h3>      
+      <p>Lo puede hacer desde el siguiente sitio: <a href="https://nightly.odoo.com/">nightly.odoo.com</a></p>
+  <pre>
+    <code class="python"> 
+          wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
+          echo "deb http://nightly.odoo.com/10.0/nightly/deb/ ./" >> /etc/apt/sources.list
+          apt-get update && apt-get install odoo
+     </code>
+ </pre>
+     
+     
+     
+
+      <h3 id="conf4">4.4 Procesos Odoo en Windows</h3>      
+      <p>Si queremos saber si tenemos un error tenemos que ver el archivo odoo.log que cambia en tiempo real</p>
+ <pre>
+    <code class="python"> 
+          # Instalamos Windows Server 2003 Resource Kit Tools
+          https://www.microsoft.com/en-us/download/confirmation.aspx?id=17657
+
+
+          # Nos colocamos en la carpeta de la app
+          C:\Program Files (x86)\Windows Resource Kits\Tools
+
+
+          # Ejecutamos en el CMD el siguiente comando
+          tail.exe -f "C:\Program Files (x86)\Odoo 9.0-20160521\server\odoo.log"
+  </code>
+ </pre>
+     
+     
+     
+     
+     <h3 id="conf5">4.5 Clonando un módulo de GitHub</h3>      
+      <p>Si queremos clonar un módulo de odoo desde Github usamos los siguientes comandos</p>
+<pre>
+    <code class="python"> 
+          ## Instalamos git ###
+          sudo apt install git
+          
+          ## nos colocamos sobre la carpeta de modulos ###
+          cd /usr/lib/python2.7/dist-packages/openerp/addons
+
+          ## Instalamos el primer modulo ##
+          git clone -b 9.0 https://github.com/dansanti/l10n_cl_vat
+          sudo service odoo restart
+    </code>
+ </pre>
+     
+      
+    
+    
+      <!-- ####################################  -->
+
+
+
+<h3 id="est1">5.1 Plantilla de un módulo</h3>      
    <p>__init__.py</p>
     <pre>
         <code class="python">   
@@ -203,86 +283,7 @@ Configuracion del campo RUC
     ],
 }
       </code>
- </pre>
-     
-     
-      <!-- ####################################  --> 
-
-      <h3 id="conf1">Respaldo Base de Datos</h3>      
-      <p>Para crear un respaldo de la base de datos utilizaremos el siguiente comando.</p>
- <pre>
-    <code class="python"> 
-          http://localhost:8069/web/database/manager
-    </code>
- </pre>
-
-     
-     
-     
-
-      <h3 id="conf2">Password por defecto</h3>      
-      <p>Contraseñas por defecto.</p>
-    <pre>
-    <code class="python"> 
-          Port: 5432
-          Username:openpg
-          Password:openpgpwd
-   </code>
- </pre>
-
-      <h3 id="conf3">Instalando Odoo en Ubuntu</h3>      
-      <p>Lo puede hacer desde el siguiente sitio: <a href="https://nightly.odoo.com/">nightly.odoo.com</a></p>
-  <pre>
-    <code class="python"> 
-          wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
-          echo "deb http://nightly.odoo.com/10.0/nightly/deb/ ./" >> /etc/apt/sources.list
-          apt-get update && apt-get install odoo
-     </code>
- </pre>
-     
-     
-     
-
-      <h3 id="conf4">Procesos Odoo en Windows</h3>      
-      <p>Si queremos saber si tenemos un error tenemos que ver el archivo odoo.log que cambia en tiempo real</p>
- <pre>
-    <code class="python"> 
-          # Instalamos Windows Server 2003 Resource Kit Tools
-          https://www.microsoft.com/en-us/download/confirmation.aspx?id=17657
-
-
-          # Nos colocamos en la carpeta de la app
-          C:\Program Files (x86)\Windows Resource Kits\Tools
-
-
-          # Ejecutamos en el CMD el siguiente comando
-          tail.exe -f "C:\Program Files (x86)\Odoo 9.0-20160521\server\odoo.log"
-  </code>
- </pre>
-     
-     
-     
-     
-     <h3 id="conf5"> Clonando un módulo de GitHub</h3>      
-      <p>Si queremos clonar un módulo de odoo desde Github usamos los siguientes comandos</p>
-<pre>
-    <code class="python"> 
-          ## Instalamos git ###
-          sudo apt install git
-          
-          ## nos colocamos sobre la carpeta de modulos ###
-          cd /usr/lib/python2.7/dist-packages/openerp/addons
-
-          ## Instalamos el primer modulo ##
-          git clone -b 9.0 https://github.com/dansanti/l10n_cl_vat
-          sudo service odoo restart
-    </code>
- </pre>
-     
-      
-    
-    
-      <!-- ####################################  -->
+ </pre>      
 
 
       <h3 id="link1">Links de Interés</h3>
