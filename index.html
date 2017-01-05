@@ -272,8 +272,10 @@
      <h3 id="conf6">4.6 Carpeta de módulos externos</h3>      
       <p>En Odoo es recomendable instalar los módulo que no son oficiales en otra carpeta para ello seguiremos los siguientes pasos</p>
 <pre>
-    <code class="python"> 
-          
+    <code class="python">       
+          ## 0- Los módulos estandar de Odoo 10.0 estan en la siguiente dirección ##
+          cd /usr/lib/python2.7/dist-packages/openerp/addons
+  
           ## 1- Nos conectamos con permiso de administrador ##
           sudo su
 
@@ -286,9 +288,18 @@
           ## 4- Instalamos git ###
           sudo apt install git
 
-          ## 5- Clonamos el repositorio ###
+          ## 5- Clonamos el repositorio con el módulo que nos interese ###
           git clone https://github.com/odoochile/Odoo-Chile
-          
+
+          ## 6 - Adicionamos la carpeta al archivo de configuración de Odoo ##
+          cd /etc/odoo
+          nano odoo.conf
+          addons_path = /usr/lib/python2.7/dist-packages/openerp/addons, /var/lib/odoo/.local/share/Odoo/addons/10.0
+          Crtl + X
+          Enter
+
+          ## 7 - Reiniciamos odoo ##
+          service odoo restart
     </code>
  </pre>
 
