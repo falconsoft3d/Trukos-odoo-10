@@ -27,6 +27,25 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 </script>
 <!--End of Zendesk Chat Script-->
 	
+	
+	
+<script>
+      (function(d,t) {
+        var BASE_URL="";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'f44kX9JuXoDZtvSZsQXY46Gi',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+</script>
+	
 <script type='text/javascript'>
 //some default pre init
 var Countly = Countly || {};
